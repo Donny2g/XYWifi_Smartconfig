@@ -298,6 +298,7 @@
                     }
                     if (receiveData != nil)
                     {
+                        NSLog(@"设备回复了 = %@",[[NSString alloc] initWithData:receiveData encoding:NSUTF8StringEncoding]);
                         NSString *bssid =
                         [ESP_ByteUtil parseBssid:(Byte *)[receiveData bytes]
                                           Offset:[self._parameter getEsptouchResultOneLen]
@@ -358,13 +359,18 @@
     
     int index = 0;
     
+    if (DEBUG_ON)
+    {
+        NSLog(@"Lhh start __execute");
+    }
+    
     while (!self._isInterrupt)
     {
         if (currentTime - lastTime >= [self._parameter getTimeoutTotalCodeMillisecond]/1000.0)
         {
             if (DEBUG_ON)
             {
-                NSLog(@"ESPTouchTask __execute() send gc code ");
+                NSLog(@"ESPTouchTask __execute() send gc code index = %zi gcBytes2 = %zi",index,gcBytes2.count);
             }
             // send guide code
             while (!self._isInterrupt && [[NSDate date] timeIntervalSince1970] - currentTime < [self._parameter getTimeoutGuideCodeMillisecond]/1000.0)
@@ -383,6 +389,10 @@
         }
         else
         {
+            if (DEBUG_ON)
+            {
+                NSLog(@"ESPTouchTask __execute() send dc code index = %zi dcBytes2 = %zi",index,dcBytes2.count);
+            }
             [self._client sendDataWithBytesArray2:dcBytes2
                                            Offset:index
                                             Count:ONE_DATA_LEN

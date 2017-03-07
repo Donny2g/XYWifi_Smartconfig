@@ -23,11 +23,7 @@ Pod::Spec.new do |s|
   # s.osx.deployment_target = '10.7'
   s.requires_arc = true
 
-  s.source_files  = 'XYWifi_Smartconfig/EspTouchDemo/Classes/ESP_File/ESP_Protocol/*'
-  s.source_files  = 'XYWifi_Smartconfig/EspTouchDemo/Classes/ESP_File/ESP_Task/*'
-  s.source_files  = 'XYWifi_Smartconfig/EspTouchDemo/Classes/ESP_File/ESP_Touch/*'
-  s.source_files  = 'XYWifi_Smartconfig/EspTouchDemo/Classes/ESP_File/ESP_Udp/*'
-  s.source_files  = 'XYWifi_Smartconfig/EspTouchDemo/Classes/ESP_File/ESP_Util/*'
+  s.source_files  = 'XYWifi_Smartconfig/EspTouchDemo/Classes/ESP_File/*'
 
   # s.resources = 'Assets'
 

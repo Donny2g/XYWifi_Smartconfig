@@ -147,9 +147,9 @@
 //                        [self presentViewController:server animated:YES completion:nil];
 
                         
-                        ClientViewController *client = [[ClientViewController alloc] init];
-                        [self presentViewController:client animated:YES completion:nil];
-                        client.ipString = [ESP_NetUtil descriptionInetAddr4ByData:myResult.ipAddrData];
+//                        ClientViewController *client = [[ClientViewController alloc] init];
+//                        [self presentViewController:client animated:YES completion:nil];
+//                        client.ipString = [ESP_NetUtil descriptionInetAddr4ByData:myResult.ipAddrData];
                         
                         
 //                        ViewController *client = [[ViewController alloc] init];
@@ -157,8 +157,8 @@
 //                        client.ipString = [ESP_NetUtil descriptionInetAddr4ByData:myResult.ipAddrData];
                         
                         
-//                        UDPRadioViewController *udp = [[UDPRadioViewController alloc] init];
-//                        [self presentViewController:udp animated:YES completion:nil];
+                        UDPRadioViewController *udp = [[UDPRadioViewController alloc] init];
+                        [self presentViewController:udp animated:YES completion:nil];
                         
                         
                     }
@@ -384,11 +384,11 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-//    UDPRadioViewController *udp = [[UDPRadioViewController alloc] init];
-//    [self presentViewController:udp animated:YES completion:nil];
+    UDPRadioViewController *udp = [[UDPRadioViewController alloc] init];
+    [self presentViewController:udp animated:YES completion:nil];
     
-    ClientViewController *client = [[ClientViewController alloc] init];
-    [self presentViewController:client animated:YES completion:nil];
+//    ClientViewController *client = [[ClientViewController alloc] init];
+//    [self presentViewController:client animated:YES completion:nil];
 
 //    ServerViewController *client = [[ServerViewController alloc] init];
 //    [self presentViewController:client animated:YES completion:nil];
