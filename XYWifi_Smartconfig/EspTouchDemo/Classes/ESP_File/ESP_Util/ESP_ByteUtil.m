@@ -127,8 +127,9 @@
         k = 0xff & bssidBytes[i];
         hexK = [NSString stringWithFormat:@"%x", k];
         str = ((k < 16) ? ([NSString stringWithFormat:@"0%@",hexK ]) : (hexK));
-        [mStr appendString:str];
+        [mStr appendString:[NSString stringWithFormat:@"%@:",str]];
     }
+    [mStr deleteCharactersInRange:NSMakeRange(mStr.length - 1, 1)];
     return mStr;
 }
 

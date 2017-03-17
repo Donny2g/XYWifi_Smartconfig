@@ -30,7 +30,7 @@
  *            the Ap's ssid
  * @param apBssid
  *            the Ap's bssid
- * @param apPassword
+ * @param apPwd
  *            the Ap's password
  * @param isSsidHidden
  *            whether the Ap's ssid is hidden
@@ -44,14 +44,12 @@
  *            the Ap's ssid
  * @param apBssid
  *            the Ap's bssid
- * @param apPassword
+ * @param apPwd
  *            the Ap's password
  * @param isSsidHidden
  *            whether the Ap's ssid is hidden
- * @param timeoutMillisecond(it should be >= 15000+6000)
+ * @param timeoutMillisecond (it should be >= 15000+6000)
  * 			  millisecond of total timeout
- * @param context
- *            the Context of the Application
  */
 - (id) initWithApSsid: (NSString *)apSsid andApBssid: (NSString *) apBssid andApPwd: (NSString *)apPwd andIsSsidHiden: (BOOL) isSsidHidden andTimeoutMillisecond: (int) timeoutMillisecond;
 

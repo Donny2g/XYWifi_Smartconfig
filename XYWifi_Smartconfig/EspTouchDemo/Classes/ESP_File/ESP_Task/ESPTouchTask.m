@@ -186,7 +186,7 @@
         {
             NSLog(@"ESPTouchTask __putEsptouchResult(): put one more result");
         }
-        ESPTouchResult *esptouchResult = [[ESPTouchResult alloc]initWithIsSuc:isSuc andBssid:bssid andInetAddrData:inetAddr];
+        ESPTouchResult *esptouchResult = [[ESPTouchResult alloc] initWithIsSuc:isSuc andBssid:bssid andInetAddrData:inetAddr];
         [self._esptouchResultArray addObject:esptouchResult];
         if (self._esptouchDelegate != nil)
         {
@@ -201,7 +201,7 @@
     [self._esptouchResultArrayCondition lock];
     if ([self._esptouchResultArray count] == 0)
     {
-        ESPTouchResult *esptouchResult = [[ESPTouchResult alloc]initWithIsSuc:NO andBssid:nil andInetAddrData:nil];
+        ESPTouchResult *esptouchResult = [[ESPTouchResult alloc] initWithIsSuc:NO andBssid:nil andInetAddrData:nil];
         esptouchResult.isCancelled = self.isCancelled;
         [self._esptouchResultArray addObject:esptouchResult];
     }
@@ -370,7 +370,7 @@
         {
             if (DEBUG_ON)
             {
-                NSLog(@"ESPTouchTask __execute() send gc code index = %zi gcBytes2 = %zi",index,gcBytes2.count);
+//                NSLog(@"ESPTouchTask __execute() send gc code index = %zi gcBytes2 = %zi",index,gcBytes2.count);
             }
             // send guide code
             while (!self._isInterrupt && [[NSDate date] timeIntervalSince1970] - currentTime < [self._parameter getTimeoutGuideCodeMillisecond]/1000.0)
@@ -391,7 +391,7 @@
         {
             if (DEBUG_ON)
             {
-                NSLog(@"ESPTouchTask __execute() send dc code index = %zi dcBytes2 = %zi",index,dcBytes2.count);
+//                NSLog(@"ESPTouchTask __execute() send dc code index = %zi dcBytes2 = %zi",index,dcBytes2.count);
             }
             [self._client sendDataWithBytesArray2:dcBytes2
                                            Offset:index

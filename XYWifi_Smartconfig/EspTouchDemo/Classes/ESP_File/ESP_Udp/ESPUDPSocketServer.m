@@ -319,7 +319,7 @@
 
 - (void)set_sck_fd4:(int)_sck_fd4 {
     
-    NSLog(@"草泥马 _sck_fd4 = %zi",_sck_fd4);
+    NSLog(@"泥马 _sck_fd4 = %zi",_sck_fd4);
     __sck_fd4 = _sck_fd4;
 }
 

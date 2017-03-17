@@ -24,6 +24,16 @@
     return self;
 }
 
+- (NSString *)getIpAddressString {
+    
+    NSString *ipAddrDataStr = [ESP_NetUtil descriptionInetAddr4ByData:self.ipAddrData];
+    if (ipAddrDataStr==nil) {
+        ipAddrDataStr = [ESP_NetUtil descriptionInetAddr6ByData:self.ipAddrData];
+    }
+    
+    return ipAddrDataStr;
+}
+
 - (NSString *)description
 {
     NSString *ipAddrDataStr = [ESP_NetUtil descriptionInetAddr4ByData:self.ipAddrData];

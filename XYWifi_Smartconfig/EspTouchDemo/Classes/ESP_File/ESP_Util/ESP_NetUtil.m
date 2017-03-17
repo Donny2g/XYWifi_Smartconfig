@@ -140,7 +140,7 @@
 {
     // only ios 10.0 later required to try open network permission
     if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"10.0")) {
-        NSURL *url = [NSURL URLWithString:@"https://8.8.8.8"];
+        NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
         NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:1000];
         
         
